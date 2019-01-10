@@ -7,6 +7,6 @@ node {
    }
 stage('SonarQube analysis') 
 { 
-         sh 'mvn sonar:sonar -Dsonar.host.url=http://my77009dns.EastUS2.cloudapp.azure.com' 
+         sh 'mvn sonar:sonar -Dsonar.host.url=http://my77009dns.EastUS2.cloudapp.azure.com:9000/sonar' 
      }
 }
