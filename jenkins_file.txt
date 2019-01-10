@@ -1,0 +1,12 @@
+node {
+   stage('Preparation') { 
+      git 'https://github.com/MeghanaNettem2/devpractice'
+   }
+   stage('Build') {
+          sh "mvn clean install" 
+   }
+stage('SonarQube analysis') 
+{ 
+         sh 'mvn sonar:sonar -Dsonar.host.url=http://my77009dns.EastUS2.cloudapp.azure.com' 
+     }
+}
